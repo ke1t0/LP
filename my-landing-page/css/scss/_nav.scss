@@ -9,10 +9,54 @@
         margin: 0 auto;
     }
 
+    &__hamburger-menu {
+        display: none;
+    }
+
     &__logo {
         font-family: "Raleway", sans-serif;
         font-size: 24px;
         display: inline-block;
         padding: 11px 15px;
     }
+
+    @media (max-width: 1199px) {
+        &__container {
+            max-width: 970px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        &__container {
+            display: block;
+            max-width: 750px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        &__contents {
+            overflow: hidden;
+            height: 0;
+        }
+
+        &__title {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__hamburger-menu {
+            display: block;
+            margin-right: 14px;
+        }
+
+        .opened {
+            height: 100%;
+            border-top: 1px solid #e7e7e7;
+        }
+    }
+}
+
+.header {
+    height: 200px;
+    background-color: #000;
 }
